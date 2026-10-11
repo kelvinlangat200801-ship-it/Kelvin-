@@ -1,201 +1,493 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>For My Beautiful Girl ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Favorite Person ❤️</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Georgia,serif;color:#86264f;background:linear-gradient(135deg,#fff0f6,#ffd0e3,#fff8fb);line-height:1.8}
-header{text-align:center;padding:45px 18px}
-main{max-width:760px;margin:auto;padding:14px}
-h1{font-size:clamp(35px,8vw,54px);color:#bd306d;line-height:1.2}
-h2{color:#c73573}
-section{background:#ffffffed;border:1px solid #f6bfd4;border-radius:22px;padding:24px;margin:20px 0;box-shadow:0 8px 25px #a72a5510}
-.center{text-align:center}
-.heart{font-size:65px;animation:pulse 1.3s infinite}
-@keyframes pulse{50%{transform:scale(1.15)}}
-button{background:#e84383;color:white;border:0;border-radius:28px;padding:13px 18px;margin:6px;font-size:15px;cursor:pointer}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
-.gift{background:#fff2f7;border-radius:16px;padding:16px}
-.countdown{display:flex;gap:7px}
-.time{flex:1;background:#ffe1ed;border-radius:13px;padding:12px 2px}
-.time b{display:block;font-size:clamp(20px,5vw,30px)}
-.time small{font-size:10px}
-.letter{background:#fff5f9;border-left:4px solid #e84383;padding:18px;border-radius:10px;white-space:pre-line}
-.hidden{display:none}
-.float{position:fixed;bottom:-30px;animation:up 5s linear forwards;pointer-events:none}
-@keyframes up{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
-footer{text-align:center;padding:30px}
+body{
+  margin:0;
+  font-family:Georgia,serif;
+  background:#fff5f8;
+  color:#702747;
+  text-align:center;
+}
+header{
+  min-height:100vh;
+  padding:70px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(140deg,#ffe5ee,#ffb8d0,#fff0f6);
+}
+h1{font-size:clamp(38px,9vw,65px);color:#a51e59}
+h2{color:#b32260}
+p{line-height:1.8}
+section{padding:50px 16px}
+button{
+  background:#ed4d88;
+  color:white;
+  border:0;
+  padding:13px 20px;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  margin:8px 0;
+}
+button:hover{background:#bd285f}
+.card{
+  background:white;
+  padding:22px;
+  margin:16px auto;
+  border-radius:22px;
+  max-width:600px;
+  box-shadow:0 5px 20px #d77c9b25;
+}
+select,textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #f0a7c2;
+  border-radius:12px;
+  margin:8px 0 15px;
+  background:#fffafd;
+  color:#702747;
+  font-size:16px;
+}
+textarea{min-height:90px}
+.letter{
+  display:none;
+  background:#fff0f5;
+  padding:16px;
+  border-radius:15px;
+  margin-top:12px;
+  line-height:1.8;
+}
+.letter.show{display:block}
+.countdown{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.time{
+  background:white;
+  padding:15px 10px;
+  min-width:75px;
+  border-radius:14px;
+}
+.time strong{display:block;font-size:26px;color:#a51e59}
+.time span{font-size:12px}
+.soft{background:#ffe8f0}
+footer{
+  background:#8d1647;
+  color:white;
+  padding:35px 15px;
+}
+audio{width:100%;margin-top:12px}
+.small{font-size:13px}
+.heart{
+  position:fixed;
+  bottom:-30px;
+  z-index:10;
+  pointer-events:none;
+  animation:float 7s linear forwards;
+}
+@keyframes float{
+  to{transform:translateY(-110vh) rotate(25deg);opacity:0}
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="heart">💗</div>
-<h1>For My Favorite Person</h1>
-<p>A little world filled with love, promises and surprises, made just for you. 🥹❤️</p>
-<button onclick="document.getElementById('birthday').scrollIntoView({behavior:'smooth'})">Open Your Surprise 💌</button>
+  <p>💌 A LITTLE SURPRISE MADE JUST FOR YOU 💌</p>
+  <h1>Happy Birthday,<br>Beautiful ❤️</h1>
+  <p>
+    To my favorite person 🥹💕<br>
+    I made something special for you.
+    A little website filled with love, promises,
+    letters, and plans for our memories together.
+  </p>
+  <button onclick="openSurprise()">Open My Surprise 💗</button>
+  <p>Your favorite person ❤️</p>
 </header>
 
-<main>
-<section class="center" id="birthday">
-<h2>🎂 Countdown to October 15</h2>
-<p>Your birthday is almost here, beautiful!</p>
-<div class="countdown">
-<div class="time"><b id="days">--</b><small>DAYS</small></div>
-<div class="time"><b id="hours">--</b><small>HOURS</small></div>
-<div class="time"><b id="minutes">--</b><small>MINUTES</small></div>
-<div class="time"><b id="seconds">--</b><small>SECONDS</small></div>
-</div>
-<p id="status">Counting every moment until your special day ❤️</p>
+<section>
+  <h2>🎂 Countdown to October 15</h2>
+  <p>Your special day is almost here!</p>
+
+  <div class="countdown">
+    <div class="time"><strong id="days">0</strong><span>Days</span></div>
+    <div class="time"><strong id="hours">0</strong><span>Hours</span></div>
+    <div class="time"><strong id="minutes">0</strong><span>Minutes</span></div>
+    <div class="time"><strong id="seconds">0</strong><span>Seconds</span></div>
+  </div>
+  <p id="countMessage">Counting down to your special day ❤️</p>
+</section>
+
+<section class="soft">
+  <h2>💌 My Promises to You</h2>
+  <p>These are little promises from my heart.</p>
+
+  <div class="card">
+    <h3>🌹 Promise Number One</h3>
+    I promise to listen to you, even when you don't know
+    how to explain what you're feeling.
+  </div>
+
+  <div class="card">
+    <h3>🫂 Promise Number Two</h3>
+    I promise to respect your feelings, your boundaries,
+    your dreams, and the person you are.
+  </div>
+
+  <div class="card">
+    <h3>😂 Promise Number Three</h3>
+    I promise to keep finding reasons to make you smile,
+    laugh, and enjoy the little things in life.
+  </div>
+
+  <div class="card">
+    <h3>❤️ Promise Number Four</h3>
+    I promise to be honest with you, communicate,
+    and keep learning how to love you better.
+  </div>
+
+  <div class="card">
+    <h3>🌙 Promise Number Five</h3>
+    I can't promise every day will be perfect,
+    but I can promise to appreciate the beautiful
+    moments we get to share.
+  </div>
 </section>
 
 <section>
-<h2>💌 Letter One: Just For You</h2>
-<p>Hey, beautiful, ❤️</p>
-<p>I wanted to create something special for you, something you can open whenever you need a smile. Your birthday is getting closer, and I hope this little website reminds you how much happiness one person deserves.</p>
-<p>You have your own unique way of making life interesting. I hope you never feel that you must be perfect to deserve appreciation. You deserve kindness on ordinary days, laughter on difficult days, and people who encourage you to become the person you dream of being.</p>
-<p>This little corner of the internet is filled with words I hope will make you smile. As October 15 approaches, remember that your existence is worth celebrating. 🌹</p>
+  <h2>💌 Letters Just for You</h2>
+  <p>Tap each letter to discover what's inside.</p>
+
+  <div class="card">
+    <h3>💗 Open When You Miss Me</h3>
+    <button onclick="toggleLetter('letter1')">Open My Letter</button>
+    <div class="letter" id="letter1">
+      If I could, I'd borrow a little time from the day
+      just to sit beside you. Until then, remember that
+      someone is thinking about you and looking forward
+      to making more memories with you. ❤️
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🫂 Open When You're Feeling Low</h3>
+    <button onclick="toggleLetter('letter2')">Open My Letter</button>
+    <div class="letter" id="letter2">
+      Baby, you don't have to be strong every second.
+      It's okay to have quiet days and days when things
+      feel difficult. Be gentle with yourself.
+      You deserve kindness, peace, and happiness.
+      Sending you the warmest virtual hug. 🫂❤️
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>✨ Open Just Because You're You</h3>
+    <button onclick="toggleLetter('letter3')">Open My Letter</button>
+    <div class="letter" id="letter3">
+      There's something special about you that makes
+      you impossible to describe in just a few words.
+      I hope this new chapter brings you beautiful
+      opportunities, genuine happiness, and countless
+      reasons to smile. Happy birthday, beautiful. 💕
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="plans">
+  <h2>🌹 Our Little Plans</h2>
+  <p>
+    Birthday girl, now let's plan some memories together 😂❤️
+    Choose what you'd actually enjoy!
+  </p>
+
+  <div class="card">
+    <h3>🌹 1. A Date With Me?</h3>
+    <p>Where should I take you? 👀</p>
+
+    <label for="dateType">Choose our date:</label>
+    <select id="dateType">
+      <option>Sunset walk 🌅</option>
+      <option>Dinner date 🍽️</option>
+      <option>Picnic date 🧺</option>
+      <option>Coffee or juice date 🥤</option>
+      <option>Explore somewhere new 🗺️</option>
+      <option>Surprise me, babe 😂❤️</option>
+    </select>
+
+    <label for="dateDay">When are we going?</label>
+    <select id="dateDay">
+      <option>Friday</option>
+      <option>Saturday</option>
+      <option>Sunday</option>
+      <option>Whenever we're both free ❤️</option>
+      <option>You choose the date for us 🥹</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <h3>🍿 2. Movie Night?</h3>
+    <p>
+      Are we watching the movie or distracting each other? 😂❤️
+    </p>
+
+    <label for="movieType">Choose our movie vibe:</label>
+    <select id="movieType">
+      <option>Romantic movie 🥹</option>
+      <option>Comedy 😂</option>
+      <option>Horror 👻</option>
+      <option>Action movie 💥</option>
+      <option>You choose, I'll bring snacks ❤️</option>
+    </select>
+
+    <label for="movieWhen">When should we watch?</label>
+    <select id="movieWhen">
+      <option>This weekend</option>
+      <option>Next weekend</option>
+      <option>Whenever we're both free</option>
+      <option>Let's decide together 💕</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <h3>🧺 3. Our Next Adventure</h3>
+    <p>Which memory should we make next?</p>
+
+    <label for="adventure">Choose our adventure:</label>
+    <select id="adventure">
+      <option>Walk together holding hands 🤝</option>
+      <option>Take cute pictures together 📸</option>
+      <option>Try new food together 🍕</option>
+      <option>Talk under the stars 🌙</option>
+      <option>Play games and laugh 😂</option>
+      <option>You plan a surprise for me 🎁</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <h3>🫂 4. If I Were Beside You...</h3>
+    <p>What would you choose? Be honest 😂❤️</p>
+
+    <label for="closeChoice">Your answer:</label>
+    <select id="closeChoice">
+      <option>A warm hug 🫂</option>
+      <option>A long talk ❤️</option>
+      <option>Make each other laugh 😂</option>
+      <option>Go for a little walk 🌹</option>
+      <option>Just sit together peacefully 🥹</option>
+      <option>I'll tell you in person 🙈</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <h3>💗 5. Your Own Idea</h3>
+    <p>Anything else you'd love us to do?</p>
+
+    <textarea id="extraWish"
+      placeholder="Tell me your own idea here, birthday girl... 🥰"></textarea>
+
+    <button onclick="sendChoices()">
+      Send My Answers on WhatsApp 💚
+    </button>
+
+    <p class="small">
+      Your choices will be placed into a WhatsApp message.
+      Review it and tap Send to share your answers with me. ❤️
+    </p>
+  </div>
 </section>
 
 <section>
-<h2>🤞 My Promises to You</h2>
-<div class="grid">
-<div class="gift"><h3>❤️ Honesty</h3><p>I promise to be truthful, admit my mistakes and let my actions support my words.</p></div>
-<div class="gift"><h3>👂 Listening</h3><p>I promise to listen patiently and take your feelings seriously, even when we disagree.</p></div>
-<div class="gift"><h3>🤍 Respect</h3><p>I promise to respect your boundaries, choices, dreams and individuality.</p></div>
-<div class="gift"><h3>🌹 Appreciation</h3><p>I promise not to wait for special occasions to remind you that you matter.</p></div>
-<div class="gift"><h3>🫶 Support</h3><p>I promise to encourage your dreams and celebrate your progress.</p></div>
-<div class="gift"><h3>🌦️ Patience</h3><p>I promise to work toward understanding instead of trying to win every argument.</p></div>
-<div class="gift"><h3>😂 Laughter</h3><p>I promise to keep sharing silly moments, jokes and reasons to smile.</p></div>
-<div class="gift"><h3>🌱 Growth</h3><p>I promise to keep learning, take responsibility and work on becoming better.</p></div>
-</div>
-<p class="letter">My biggest promise is this: I don't want these words to remain beautiful sentences on a screen. I want to show care through honesty, respect, consistency and the little things I do every day. ❤️</p>
+  <h2>🎶 A Song for You</h2>
+  <div class="card">
+    <p>
+      Put on your headphones and enjoy this little moment.
+      Press play when you're ready. ❤️
+    </p>
+
+    <audio controls preload="metadata">
+      <source src="love-song.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+
+    <p class="small">
+      Add your MP3 song to the same website folder and name it
+      <b>love-song.mp3</b>. The music player will then play it.
+    </p>
+  </div>
 </section>
 
-<section>
-<h2>💌 Letter Two: When You Feel Down</h2>
-<p>My favorite person, 🫂</p>
-<p>If you ever have a difficult day, remember that one bad day does not mean you have a bad life. You do not need to solve everything at once. Take a breath, rest when you need to, and give yourself permission to start again.</p>
-<p>You deserve patience when you are tired, understanding when you are quiet, and kindness when things do not go as planned. Never let a difficult moment convince you that you are not enough.</p>
-<p>Whenever you need a little reminder to smile, come back to this letter. Imagine the warmest hug and remember that brighter moments can still be ahead. ❤️</p>
-</section>
+<section class="soft">
+  <h2>🎂 My Birthday Wish for You</h2>
 
-<section class="center">
-<h2>🎁 Choose Your Surprise</h2>
-<button onclick="gift(0)">🌸 Compliment</button>
-<button onclick="gift(1)">🫂 Virtual Hug</button>
-<button onclick="gift(2)">😘 Virtual Kiss</button>
-<button onclick="gift(3)">✨ Birthday Wish</button>
-<p id="giftMessage" class="letter"></p>
-</section>
+  <div class="card">
+    <p>
+      May this new chapter bring you peace when life gets loud,
+      courage when things feel uncertain, and happiness that
+      makes your heart feel full.
+    </p>
 
-<section>
-<h2>💌 Letter Three: Your Birthday</h2>
-<p>Dear birthday girl, 🎂</p>
-<p>October 15 is your day, and I hope it brings you beautiful memories, laughter, peace and all the little things that make your heart happy.</p>
-<p>May this new chapter bring new opportunities, genuine friendships, courage to chase your dreams and the confidence to appreciate how far you have come.</p>
-<p>I hope you keep discovering new reasons to smile, new things to be proud of and new possibilities waiting for you. You deserve to be celebrated, not only on your birthday, but throughout the year.</p>
-<p>Happy almost-birthday, beautiful! 💖</p>
-</section>
+    <p>
+      May your dreams grow bigger, your smile get brighter,
+      and your days be filled with people who genuinely care
+      about you.
+    </p>
 
-<section class="center">
-<h2>🎵 Our Love Song</h2>
-<p>Tap play and enjoy your special song while exploring the page. ❤️</p>
-<audio id="song" controls loop style="width:100%">
-<source src="love-song.mp3" type="audio/mpeg">
-</audio>
-<p><small>Add your chosen MP3 file to the same folder as this HTML file and name it love-song.mp3.</small></p>
-</section>
+    <p>
+      Thank you for being the person you are.
+      I hope you feel celebrated today and every day.
+    </p>
 
-<section>
-<h2>💗 Reasons You Are Special</h2>
-<p id="reason">Ready for a little reminder?</p>
-<button onclick="anotherReason()">Tell Me Another ❤️</button>
-</section>
+    <h2>Happy Birthday, Beautiful! ❤️🎂</h2>
 
-<section>
-<h2>💌 My Final Letter</h2>
-<p>To my favorite person,</p>
-<p>As your birthday approaches, I hope you understand that you deserve to be treated with kindness, listened to with care and encouraged to be yourself.</p>
-<p>I hope life gives you peaceful mornings, unforgettable laughter, opportunities that help you grow and people who genuinely celebrate your happiness. I hope you find the courage to pursue your dreams and the strength to keep going when things are difficult.</p>
-<p>This website cannot replace a real hug or a thoughtful present, but I hope it carries a little warmth wherever you are. Whenever you open it, I hope you find a reason to smile.</p>
-<p>On October 15, celebrate yourself, your journey and the beautiful possibilities ahead of you.</p>
-<p>Happy birthday in advance, beautiful. 🎂🌷</p>
-<p><b>With love,<br>Your favorite person ❤️</b></p>
+    <p>With love,</p>
+    <h3>Your favorite person ❤️</h3>
+
+    <button onclick="document.getElementById('plans').scrollIntoView({behavior:'smooth'})">
+      Now Let's Plan Our Date 😂💕
+    </button>
+  </div>
 </section>
-</main>
 
 <footer>
-<div class="heart">💗</div>
-<p>Made with love, just for you.</p>
-<p><b>Your favorite person ❤️</b></p>
-<button onclick="celebrate()">One Last Surprise 🎉</button>
+  <h3>Made Especially for You ❤️</h3>
+  <p>Your favorite person ❤️</p>
+  <p>One little website, a lot of love. 💌</p>
 </footer>
 
 <script>
-function getBirthday(){
- const now=new Date();
- let target=new Date(now.getFullYear(),9,15,0,0,0);
- if(now>=target)target=new Date(now.getFullYear()+1,9,15,0,0,0);
- return target;
-}
-const target=getBirthday();
 
+// YOUR WHATSAPP NUMBER
+// Kenya country code 254 + your number without the first zero.
+const YOUR_WHATSAPP_NUMBER = "254720155183";
+
+function openSurprise(){
+  document.getElementById("plans").scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+function toggleLetter(id){
+  document.getElementById(id).classList.toggle("show");
+}
+
+function sendChoices(){
+
+  const date = document.getElementById("dateType").value;
+  const dateDay = document.getElementById("dateDay").value;
+  const movie = document.getElementById("movieType").value;
+  const movieWhen = document.getElementById("movieWhen").value;
+  const adventure = document.getElementById("adventure").value;
+  const closeChoice = document.getElementById("closeChoice").value;
+
+  const extra =
+    document.getElementById("extraWish").value.trim()
+    || "No extra idea for now 🥰";
+
+  const message =
+`Hiii ❤️😂 Here are my answers from your birthday surprise website!
+
+🌹 OUR DATE
+My choice: ${date}
+Preferred day: ${dateDay}
+
+🍿 MOVIE NIGHT
+Movie vibe: ${movie}
+Preferred timing: ${movieWhen}
+
+🧺 OUR NEXT ADVENTURE
+${adventure}
+
+🫂 IF YOU WERE BESIDE ME
+${closeChoice}
+
+💗 MY OWN IDEA
+${extra}
+
+Now it's your turn to make these memories happen 😂❤️`;
+
+  const whatsappURL =
+    "https://wa.me/" +
+    YOUR_WHATSAPP_NUMBER +
+    "?text=" +
+    encodeURIComponent(message);
+
+  window.location.href = whatsappURL;
+}
+
+// COUNTDOWN TO OCTOBER 15
 function updateCountdown(){
- const diff=Math.max(0,target-new Date());
- document.getElementById('days').textContent=Math.floor(diff/86400000);
- document.getElementById('hours').textContent=Math.floor(diff%86400000/3600000);
- document.getElementById('minutes').textContent=Math.floor(diff%3600000/60000);
- document.getElementById('seconds').textContent=Math.floor(diff%60000/1000);
- document.getElementById('status').textContent=
- diff===0?'HAPPY BIRTHDAY, BEAUTIFUL! 🎂❤️':'Every second brings us closer to October 15 ❤️';
-}
-updateCountdown();
-setInterval(updateCountdown,1000);
 
-const gifts=[
-'You deserve to see yourself through kinder eyes. There is so much about you worth appreciating. 🌸',
-'Imagine the warmest hug, with no rush to let go. Sending you a virtual hug! 🫂❤️',
-'A little virtual kiss for you. Mwah! 😘',
-'May your new year bring peace, joy, growth and beautiful memories. ✨'
-];
-function gift(i){
- document.getElementById('giftMessage').textContent=gifts[i];
- hearts(8);
+  const now = new Date();
+
+  let target = new Date(
+    now.getFullYear(), 9, 15, 0, 0, 0
+  );
+
+  if(now >= target){
+    target = new Date(
+      now.getFullYear() + 1, 9, 15, 0, 0, 0
+    );
+  }
+
+  const diff = target - now;
+
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const minutes = Math.floor((diff % 3600000) / 60000);
+  const seconds = Math.floor((diff % 60000) / 1000);
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+
+  if(now.getMonth() === 9 && now.getDate() === 15){
+    document.getElementById("countMessage").textContent =
+      "It's October 15! Happy Birthday! 🎂❤️";
+  }else{
+    document.getElementById("countMessage").textContent =
+      "Counting down to your special day ❤️";
+  }
 }
-const reasons=[
-'You deserve kindness on ordinary days, not just special occasions. ❤️',
-'Your dreams matter. Keep believing in what you can become. 🌱',
-'You do not have to be perfect to be appreciated. 🌷',
-'Your happiness and peace of mind are important. 💗',
-'You deserve people who respect you and celebrate your growth. 🫶'
-];
-let ri=0;
-function anotherReason(){
- document.getElementById('reason').textContent=reasons[ri%reasons.length];
- ri++;
- hearts(4);
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// FLOATING HEART ANIMATION
+function createHeart(){
+
+  const heart = document.createElement("div");
+  heart.className = "heart";
+
+  const hearts = ["❤️","💕","💗","💖","✨"];
+  heart.textContent = hearts[
+    Math.floor(Math.random() * hearts.length)
+  ];
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (16 + Math.random() * 20) + "px";
+  heart.style.animationDuration = (5 + Math.random() * 4) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 9000);
 }
-function hearts(n){
- const icons=['💗','💕','💖','🌸','✨'];
- for(let i=0;i<n;i++){
-  const el=document.createElement('span');
-  el.className='float';
-  el.textContent=icons[Math.floor(Math.random()*icons.length)];
-  el.style.left=Math.random()*100+'vw';
-  el.style.fontSize=(18+Math.random()*20)+'px';
-  el.style.animationDuration=(4+Math.random()*3)+'s';
-  document.body.appendChild(el);
-  setTimeout(()=>el.remove(),7500);
- }
-}
-function celebrate(){
- hearts(30);
- alert('A little love, a little laughter, and lots of birthday magic! 🎂💗');
-}
+
+setInterval(createHeart, 650);
+
 </script>
+
 </body>
-                                          </html>
-  
+</html>
