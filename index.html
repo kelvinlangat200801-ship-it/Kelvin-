@@ -1,218 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Happy Birthday Nicole - 15th Oct 🎂 My Queen</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Nicole 🎂 15th Oct - My Queen</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Fredoka:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-:root{--p:#ff3e7a;--p2:#8b5cf6}
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{width:100%;overflow-x:hidden}
-body{font-family:Poppins,sans-serif;background:#fff5f8;color:#3f3f46;line-height:1.9}
-.hero{min-height:100svh;background:url('banner.jpg') center/cover no-repeat, linear-gradient(135deg,#ff3e7a,#8b5cf6);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;color:white;text-align:center;padding:40px 20px 60px;position:relative}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6),transparent)}
-.hero *{position:relative;z-index:2}
-.hero h1{font-family:Great Vibes,cursive;font-size:90px;text-shadow:0 4px 20px rgba(0,0,0,.4)}
+:root{--p:#ff3e7a;--p2:#8b5cf6}*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:#fff5f8;color:#3f3f46;line-height:1.9;overflow-x:hidden}
+.hero{min-height:100svh;background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.7)),url('1.jpg') center/cover,linear-gradient(135deg,#ff3e7a,#8b5cf6);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;color:white;text-align:center;padding:50px 20px 70px}
+.hero h1{font-family:Great Vibes,cursive;font-size:92px;text-shadow:0 4px 20px rgba(0,0,0,.6)}
 .count{display:flex;gap:12px;margin:25px 0;flex-wrap:wrap;justify-content:center}
-.count div{background:rgba(255,255,255,.25);backdrop-filter:blur(12px);padding:14px 18px;border-radius:16px;min-width:78px;border:1px solid rgba(255,255,255,.4)}
+.count div{background:rgba(255,255,255,.28);backdrop-filter:blur(12px);padding:14px 18px;border-radius:16px;min-width:78px;border:1px solid rgba(255,255,255,.4)}
 .count b{font-size:30px;display:block;font-family:Fredoka}
 .section{max-width:860px;margin:0 auto;padding:0 18px}
 .card{background:white;border-radius:26px;box-shadow:0 20px 60px rgba(0,0,0,.08);padding:32px}
 h2{font-family:Fredoka;font-size:42px;color:var(--p);text-align:center;margin:90px 0 8px}
 .sub{text-align:center;opacity:.6;margin-bottom:28px}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.ph{height:320px;border-radius:22px;overflow:hidden;position:relative;box-shadow:0 15px 35px rgba(0,0,0,.12);background:#ffe4e6}
-.ph img{width:100%;height:100%;object-fit:cover;transition:.5s}
-.ph:hover img{transform:scale(1.08)}
-.ph span{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.8));color:white;padding:14px 12px;font-size:13px;font-weight:600}
+.ph{height:360px;border-radius:22px;overflow:hidden;position:relative;box-shadow:0 15px 35px rgba(0,0,0,.12);background:#ffe4e6}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph span{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));color:white;padding:14px 12px;font-size:13px;font-weight:600}
 .timeline{border-left:4px solid #ffd1dc;margin:20px 0 20px 12px;padding-left:28px}
 .tl{margin-bottom:40px;position:relative}
 .tl::before{content:'';position:absolute;left:-37px;top:8px;width:16px;height:16px;background:var(--p);border-radius:50%;border:3px solid white;box-shadow:0 0 0 4px #ffd1dc}
 .letters{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.letter-box{background:white;border-radius:18px;padding:22px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.06);cursor:pointer;transition:.3s;border:2px solid #fff0f3}
-.letter-box:hover{transform:translateY(-8px);border-color:var(--p)}
+.letter-box{background:white;border-radius:18px;padding:22px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.06);cursor:pointer;border:2px solid #fff0f3;transition:.3s}
+.letter-box:hover{transform:translateY(-6px);border-color:var(--p)}
 .promises{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .promise{height:210px;perspective:1000px;cursor:pointer}
 .inner{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:.8s}
 .promise.flipped .inner{transform:rotateY(180deg)}
 .front,.back{position:absolute;inset:0;border-radius:20px;padding:22px;display:flex;flex-direction:column;justify-content:center;align-items:center;backface-visibility:hidden;box-shadow:0 10px 25px rgba(0,0,0,.06);text-align:center}
-.front{background:white}
-.back{background:linear-gradient(135deg,#ff3e7a,#8b5cf6);color:white;transform:rotateY(180deg)}
+.front{background:white}.back{background:linear-gradient(135deg,#ff3e7a,#8b5cf6);color:white;transform:rotateY(180deg)}
 .quiz{background:white;border-radius:20px;padding:22px;margin:18px 0;box-shadow:0 8px 20px rgba(0,0,0,.05)}
-.quiz button{padding:11px 20px;border:none;border-radius:50px;background:#f3f4f6;margin:6px 6px 0 0;cursor:pointer;font-weight:600;transition:.2s}
-.quiz button.correct{background:#22c55e;color:white;transform:scale(1.05)}
-.quiz button.wrong{background:#ef4444;color:white}
-.reasons{columns:2;gap:14px}
-.reason{background:white;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 6px 14px rgba(0,0,0,.05);break-inside:avoid;font-size:14px}
-.bucket{display:grid;gap:12px}
-.bucket-item{background:white;border-radius:16px;padding:16px 18px;display:flex;gap:12px;align-items:center;box-shadow:0 6px 14px rgba(0,0,0,.05)}
+.quiz button{padding:11px 20px;border:none;border-radius:50px;background:#f3f4f6;margin:6px 6px 0 0;cursor:pointer;font-weight:600}
+.quiz button.correct{background:#22c55e;color:white}.quiz button.wrong{background:#ef4444;color:white}
+.reasons{columns:2;gap:14px}.reason{background:white;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 6px 14px rgba(0,0,0,.05);break-inside:avoid;font-size:14px}
+.bucket{display:grid;gap:12px}.bucket-item{background:white;border-radius:16px;padding:16px 18px;display:flex;gap:12px;align-items:center;box-shadow:0 6px 14px rgba(0,0,0,.05)}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;justify-content:center;align-items:center;z-index:99;padding:20px}
-.modal-content{background:#fffaf0;border-radius:22px;max-width:640px;width:100%;padding:34px;max-height:85vh;overflow-y:auto;border:2px dashed #ff8fab;position:relative;box-shadow:0 30px 90px rgba(0,0,0,.4)}
+.modal-content{background:#fffaf0;border-radius:22px;max-width:640px;width:100%;padding:34px;max-height:85vh;overflow-y:auto;position:relative;border:2px dashed #ff8fab}
 .close{position:absolute;right:15px;top:8px;font-size:34px;cursor:pointer}
 .final{background:linear-gradient(135deg,#4c0519,#7c3aed);color:white;padding:90px 20px;text-align:center;margin-top:90px}
-.gift{width:160px;height:160px;background:linear-gradient(135deg,#ff3e7a,#ffb703);margin:0 auto;border-radius:30px;display:flex;justify-content:center;align-items:center;font-size:70px;cursor:pointer;animation:bounce 2s infinite;box-shadow:0 20px 50px rgba(255,62,122,.5)}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+.gift{width:160px;height:160px;background:linear-gradient(135deg,#ff3e7a,#ffb703);margin:0 auto;border-radius:30px;display:flex;justify-content:center;align-items:center;font-size:70px;cursor:pointer;animation:bounce 2s infinite}
 .float{position:fixed;top:-20px;pointer-events:none;animation:fall linear forwards;z-index:1}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
 @keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
-.love-meter{background:white;border-radius:22px;padding:28px;text-align:center;margin:30px 0;box-shadow:0 15px 40px rgba(0,0,0,.08)}
-.meter-bar{height:28px;background:#ffe4e6;border-radius:50px;overflow:hidden;margin:15px 0}
-.meter-fill{height:100%;width:0%;background:linear-gradient(90deg,#ff3e7a,#8b5cf6);border-radius:50px;transition:2s}
 @media(max-width:640px){.gallery,.letters,.promises{grid-template-columns:1fr}.reasons{columns:1}.hero h1{font-size:68px}}
 </style>
 </head>
 <body>
 
 <div class="hero">
-<p style="letter-spacing:6px;font-weight:800;background:rgba(255,255,255,.2);padding:6px 18px;border-radius:50px;backdrop-filter:blur(10px)">OCTOBER 15TH — MY QUEEN'S BIRTHDAY</p>
+<p style="letter-spacing:5px;font-weight:800;background:rgba(255,255,255,.25);padding:6px 18px;border-radius:50px;backdrop-filter:blur(10px)">OCT 15TH - MY QUEEN'S DAY - 4 DAYS TO GO</p>
 <h1>Nicole</h1>
-<p style="font-size:24px;font-weight:600;text-shadow:0 2px 10px rgba(0,0,0,.5)">My Birthday Girl, My Everything, My Forever 🎂💖</p>
+<p style="font-size:24px;font-weight:600;text-shadow:0 2px 10px rgba(0,0,0,.6)">My Birthday Girl, My Everything 🎂💖</p>
 <div class="count"><div><b id="d">04</b>DAYS</div><div><b id="h">00</b>HRS</div><div><b id="m">00</b>MIN</div><div><b id="s">00</b>SEC</div></div>
-<p style="font-weight:600">Until your special day — 15th October 2026 ✨</p>
+<p style="font-weight:600">Until 15th October 2026 ✨</p>
 </div>
 
 <div class="section">
-<div class="card" style="margin-top:-50px;z-index:5;position:relative">
+<div class="card" style="margin-top:-50px;position:relative;z-index:5">
 <span style="font-family:Great Vibes;font-size:46px;color:#ff3e7a">My Dearest Nicole,</span><br><br>
-My love, if you are reading this, it means I finally finished what I've been building for days with your photos smiling at me.<br><br>
-I wanted to give you something no shop sells. Not flowers that die, not cake that finishes — but something that stays forever, just like my love for you.<br><br>
-This website is VERY LONG because my love for you is long — endless. Every scroll is a chapter of us. Photos, letters, promises, quizzes, bucket lists, and my heart poured out.<br><br>
-Your birthday is in <b>4 days — 15th October</b> — but I celebrate you every day. Keep scrolling slowly, my love. There's a lot for you, my queen.<br><br>
-<b>Forever yours,<br>Kelvin 💖<br>11th Oct 2026 — 4 days to go</b>
+If you're reading this, your photos are smiling at me while I built this. I wanted something no shop sells — something that stays forever, just like my love for you.<br><br>
+This website is VERY LONG because my love is endless. Photos, letters, promises, quiz, bucket list, our song, and my heart. Keep scrolling slowly, my queen. It's all you.<br><br>
+Your birthday is in <b>4 days — 15th October</b> — but I celebrate you every day.<br><br>
+<b>Forever yours,<br>Kelvin 💖<br>11th Oct 2026</b>
 </div>
 
-<h2>📸 You — My Favorite View</h2>
-<p class="sub">Every photo of you is my wallpaper — you are art</p>
+<h2>📸 You - My Favorite View</h2>
+<p class="sub">Every photo perfect - my queen</p>
 <div class="gallery">
-<div class="ph"><img src="1.jpg"><span>💖 Photo 1 — That smile that stole my heart</span></div>
-<div class="ph"><img src="2.jpg"><span>✨ Photo 2 — My queen in pink, my favorite</span></div>
-<div class="ph"><img src="3.jpg"><span>🌙 Photo 3 — Even your mirror selfies are perfect</span></div>
-<div class="ph"><img src="4.jpg"><span>🌹 Photo 4 — Beautiful, inside and out</span></div>
-<div class="ph"><img src="5.jpg"><span>💍 Photo 5 — The girl I want forever</span></div>
-<div class="ph"><img src="banner.jpg"><span>🎂 Photo 6 — My Birthday Queen Banner</span></div>
+<div class="ph"><img src="1.jpg"><span>💖 That smile that stole my heart</span></div>
+<div class="ph"><img src="2.jpg"><span>✨ My queen in pink - my favorite</span></div>
+<div class="ph"><img src="3.jpg"><span>🌙 Mirror selfie perfect</span></div>
+<div class="ph"><img src="4.jpg"><span>🌹 Beautiful inside & out</span></div>
+<div class="ph"><img src="5.jpg"><span>💍 The girl I want forever - Oct 15 Queen</span></div>
+<div class="ph"><img src="2.jpg"><span>🎂 My Birthday Queen - 4 days to go!</span></div>
+</div>
+
+<h2>🎵 Our Song - Ordinary by Alex Warren</h2>
+<p class="sub">Play this while you scroll - this song is us</p>
+<div class="card" style="text-align:center">
+<p style="font-family:Great Vibes;font-size:36px;color:var(--p)">You make the ordinary extraordinary</p>
+<p style="opacity:.7;margin-bottom:10px">This is exactly what you do to my life, Nicole</p>
+<iframe style="border-radius:12px;margin:18px 0" src="https://open.spotify.com/embed/track/6qqdMthlGS4B4u1Yl3R3R6?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe width="100%" height="260" style="border-radius:16px" src="https://www.youtube.com/embed/0R46Y5a5a5U" title="Alex Warren - Ordinary (Official Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p style="margin-top:18px;font-size:14px;line-height:1.7">
+Because of copyright I can't put all lyrics here, but the part that is YOU:<br>
+<b><i>"You make the ordinary feel extraordinary..."</i></b><br><br>
+Every ordinary day with you feels magical. That's why Oct 15th is not just your birthday - it's the day my extraordinary life began.<br><br>
+<a href="https://www.youtube.com/watch?v=0R46Y5a5a5U" target="_blank" style="background:var(--p);color:white;padding:10px 22px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-block">▶️ Watch Official Video & Full Lyrics</a>
+</p>
 </div>
 
 <h2>📅 Our Love Timeline</h2>
-<p class="sub">No exact dates needed — I remember how you made me feel</p>
-<div class="card">
-<div class="timeline">
-<div class="tl"><b>The Day We Met 💫</b><br><small>I didn't know that day would change my whole life. One hello from you and I was gone. My heart knew before my mind did.</small></div>
-<div class="tl"><b>The First Time You Made Me Laugh Hard 😂</b><br><small>Your laugh is infectious. I remember thinking — I want to make her laugh forever, every day of my life.</small></div>
-<div class="tl"><b>Our First Long Night Talk 🌙 — 3AM Calls</b><br><small>We talked till 3AM and I didn't want to sleep. I wanted to know everything about you. Your dreams, fears, stories.</small></div>
-<div class="tl"><b>When I Knew You Were The One 💖</b><br><small>It wasn't one moment, it was all moments. Every small thing you did made me fall harder. Your kindness, your loyalty.</small></div>
-<div class="tl"><b>Our First Fight & Making Up 🤝</b><br><small>Even our fight showed me we are real. We don't give up on each other. Real love fights but stays.</small></div>
-<div class="tl"><b>11th Oct 2026 — Today 📍 4 Days To Your Birthday</b><br><small>I'm building this at night thinking of your smile. Counting down every hour to 15th October. My heart is racing.</small></div>
-<div class="tl"><b>15th Oct 2026 🎂 — YOUR BIRTHDAY — My Favorite Holiday</b><br><small>The day you were born. The day the world got you. And later, the world gave you to me. My greatest gift ever.</small></div>
-<div class="tl"><b>15th Oct 2030, 2040, 2050... ♾️ — Forever Birthdays With You</b><br><small>I want to celebrate every birthday with you — when you're 30, 50, 80, still holding your hand, still loving you more.</small></div>
-</div>
-</div>
+<p class="sub">I don't need exact dates - I remember feelings</p>
+<div class="card"><div class="timeline">
+<div class="tl"><b>The Day We Met 💫</b><br><small>One hello from you and I was gone. My heart knew.</small></div>
+<div class="tl"><b>Our 3AM Talks 🌙</b><br><small>We talked till 3AM. I didn't want to sleep. I wanted to know everything about you.</small></div>
+<div class="tl"><b>11th Oct 2026 📍 Today - 4 Days To Your Birthday</b><br><small>Building this at night, listening to Ordinary, thinking of your smile.</small></div>
+<div class="tl"><b>15th Oct 2026 🎂 YOUR BIRTHDAY - My Favorite Holiday</b><br><small>The day the world got you. And later, gave you to me. My greatest gift.</small></div>
+<div class="tl"><b>Forever ♾️ Every Oct 15th With You</b><br><small>30, 50, 80 - still playing Ordinary, still holding your hand.</small></div>
+</div></div>
 
-<div class="love-meter">
-<h3 style="font-family:Fredoka;color:var(--p);font-size:28px">💖 How Much I Love You — Meter</h3>
-<p>Tap to measure my love for you</p>
-<div class="meter-bar"><div class="meter-fill" id="meter"></div></div>
-<p id="meterText" style="font-weight:700;color:var(--p)">Tap the button below</p>
-<button onclick="fillMeter()" style="padding:12px 28px;border:none;background:var(--p);color:white;border-radius:50px;font-weight:700;cursor:pointer;margin-top:10px">Measure My Love For You 💖</button>
-</div>
-
-<h2>💌 6 Letters I Wrote At Midnight Thinking Of You</h2>
+<h2>💌 6 Midnight Letters For You</h2>
 <div class="letters">
-<div class="letter-box" onclick="openM('m1')">💌<br><b>Letter 1</b><br>Birthday Love<br><small>For Oct 15th</small></div>
+<div class="letter-box" onclick="openM('m1')">💌<br><b>Letter 1</b><br>Birthday Love<br><small>Oct 15th</small></div>
 <div class="letter-box" onclick="openM('m2')">🌙<br><b>Letter 2</b><br>Why You Are Special</div>
 <div class="letter-box" onclick="openM('m3')">💖<br><b>Letter 3</b><br>Our Memories</div>
 <div class="letter-box" onclick="openM('m4')">🔒<br><b>Letter 4</b><br>My Secret Wish</div>
 <div class="letter-box" onclick="openM('m5')">😭<br><b>Letter 5</b><br>When I Miss You</div>
-<div class="letter-box" onclick="openM('m6')">🌹<br><b>Letter 6</b><br>Future Us — 2030</div>
+<div class="letter-box" onclick="openM('m6')">🌹<br><b>Letter 6</b><br>Future Us</div>
 </div>
 
-<h2>🤝 My 12 Promises To You — Forever Promises</h2>
-<p class="sub">Tap to flip — these are not just birthday promises, they are life promises</p>
+<h2>🤝 My 12 Promises To You - Forever</h2>
+<p class="sub">Tap to flip - not just birthday, life promises</p>
 <div class="promises">
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">💍<br><b>Promise 1</b><br><small>Tap</small></div><div class="back"><b>I promise to love you on your worst days as much as your best days.</b></div></div></div>
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🛡️<br><b>Promise 2</b><br><small>Tap</small></div><div class="back"><b>I promise to protect your heart like it's the most fragile treasure in the world.</b></div></div></div>
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">👂<br><b>Promise 3</b><br><small>Tap</small></div><div class="back"><b>I promise to listen at 2AM when you just need to vent, without judging.</b></div></div></div>
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">😂<br><b>Promise 4</b><br><small>Tap</small></div><div class="back"><b>I promise to make you laugh until your cheeks hurt, every single day.</b></div></div></div>
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🎂<br><b>Promise 5</b><br><small>Tap</small></div><div class="back"><b>I promise to make every Oct 15th magical forever — your birthdays will always be special.</b></div></div></div>
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🌟<br><b>Promise 6</b><br><small>Tap</small></div><div class="back"><b>I promise to support your dreams like they are my own dreams.</b></div></div></div>
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🤫<br><b>Promise 7</b><br><small>Tap</small></div><div class="back"><b>I promise to keep your secrets safe and be your safest place.</b></div></div></div>
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">♾️<br><b>Promise 8</b><br><small>Tap</small></div><div class="back"><b>I promise to choose you, every day, forever. No matter what life brings.</b></div></div></div>
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">💌<br><b>Promise 9</b><br><small>Tap</small></div><div class="back"><b>I promise to write you love letters even when we're 80 years old.</b></div></div></div>
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🤲<br><b>Promise 10</b><br><small>Tap</small></div><div class="back"><b>I promise to hold your hand through everything — good and bad.</b></div></div></div>
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">👑<br><b>Promise 11</b><br><small>Tap</small></div><div class="back"><b>I promise to treat you like the queen you are, every day.</b></div></div></div>
-<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🏠<br><b>Promise 12</b><br><small>Tap</small></div><div class="back"><b>I promise to build a beautiful future with you — house, family, forever.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">💍<br><b>Promise 1</b></div><div class="back"><b>I promise to love you on worst days as much as best.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🛡️<br><b>Promise 2</b></div><div class="back"><b>Protect your heart like treasure.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">👂<br><b>Promise 3</b></div><div class="back"><b>Listen at 2AM without judging.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">😂<br><b>Promise 4</b></div><div class="back"><b>Make you laugh daily.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🎂<br><b>Promise 5</b></div><div class="back"><b>Every Oct 15th magical forever.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🌟<br><b>Promise 6</b></div><div class="back"><b>Support your dreams like mine.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🤫<br><b>Promise 7</b></div><div class="back"><b>Keep your secrets safe.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">♾️<br><b>Promise 8</b></div><div class="back"><b>Choose you every day forever.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">💌<br><b>Promise 9</b></div><div class="back"><b>Love letters even at 80.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🤲<br><b>Promise 10</b></div><div class="back"><b>Hold your hand through everything.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">👑<br><b>Promise 11</b></div><div class="back"><b>Treat you like queen you are.</b></div></div></div>
+<div class="promise" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="front">🏠<br><b>Promise 12</b></div><div class="back"><b>Build a beautiful future with you.</b></div></div></div>
 </div>
 
-<h2>❓ Our Love Quiz — 6 Questions</h2>
-<p class="sub">Answer these — I know my birthday girl will get 100% 😉</p>
-<div class="quiz"><b>1. When is your birthday? My favorite holiday 🎂</b><br><button onclick="q(this,1)">Oct 15 — My Queen's Day!</button><button onclick="q(this,0)">Jan 1</button><p class="ans" style="display:none;margin-top:10px;color:#22c55e;font-weight:700">Correct! My favorite holiday ever 💖 Only 4 days to go!</p></div>
-<div class="quiz"><b>2. What do I love most about you?</b><br><button onclick="q(this,1)">Your beautiful heart, smile & soul</button><button onclick="q(this,0)">Your phone case</button><p class="ans" style="display:none;margin-top:10px;color:#22c55e">Yes! Your heart is what stole mine forever 💘</p></div>
-<div class="quiz"><b>3. How many days left today (Oct 11) to Oct 15?</b><br><button onclick="q(this,1)">4 days! 🎉</button><button onclick="q(this,0)">14 days</button><p class="ans" style="display:none;margin-top:10px;color:#22c55e">4 days — I can't wait to celebrate you!</p></div>
-<div class="quiz"><b>4. What is my biggest promise?</b><br><button onclick="q(this,0)">To annoy you forever</button><button onclick="q(this,1)">To love you forever & beyond ♾️</button><p class="ans" style="display:none;margin-top:10px;color:#ff3e7a;font-weight:700">Forever is not long enough for you ✨</p></div>
-<div class="quiz"><b>5. Who is the most beautiful girl in the world?</b><br><button onclick="q(this,1)">Nicole — obviously! 👑</button><button onclick="q(this,0)">Someone else</button><p class="ans" style="display:none;margin-top:10px;color:#ff3e7a">You already know! 😍</p></div>
-<div class="quiz"><b>6. Will you be my birthday girl forever? 💍</b><br><button onclick="q(this,1)" style="background:#ff3e7a;color:white">YES! 💖</button><button onclick="q(this,1)" style="background:#8b5cf6;color:white">YES YES A MILLION TIMES! 💍</button><p class="ans" style="display:none;margin-top:10px;color:#ff3e7a;font-weight:700">You just made me the happiest man alive! 😭💖 I love you!</p></div>
+<h2>❓ Our Love Quiz - 4 Questions</h2>
+<div class="quiz"><b>1. When is your birthday? My favorite day 🎂</b><br><button onclick="q(this,1)">Oct 15 - My Queen's Day!</button><button onclick="q(this,0)">Jan 1</button><p class="ans" style="display:none">Correct! 4 days to go! 💖</p></div>
+<div class="quiz"><b>2. What song is us? 🎵</b><br><button onclick="q(this,1)">Ordinary - Alex Warren</button><button onclick="q(this,0)">Twinkle Twinkle</button><p class="ans" style="display:none">Yes! You make my ordinary extraordinary ✨</p></div>
+<div class="quiz"><b>3. Who is most beautiful girl in world? 👑</b><br><button onclick="q(this,1)">Nicole - obviously!</button><button onclick="q(this,0)">Someone else</button><p class="ans" style="display:none">You already know! 😍</p></div>
+<div class="quiz"><b>4. Will you be my birthday girl forever? 💍</b><br><button onclick="q(this,1)" style="background:#ff3e7a;color:white">YES! 💖</button><button onclick="q(this,1)" style="background:#8b5cf6;color:white">YES YES! 💍</button><p class="ans" style="display:none">You made me happiest man alive! 😭💖</p></div>
 
-<h2>🗺️ Our Bucket List — Things We MUST Do</h2>
-<p class="sub">Check them off as we do them together</p>
+<h2>🗺️ Our Bucket List</h2>
 <div class="bucket">
-<div class="bucket-item"><input type="checkbox"><span>🎂 Celebrate your 2026 birthday together on Oct 15th — 4 days to go!</span></div>
-<div class="bucket-item"><input type="checkbox"><span>✈️ Travel to your dream destination together, just us two</span></div>
-<div class="bucket-item"><input type="checkbox"><span>🎬 Watch sunset at the beach holding hands, with your head on my shoulder</span></div>
-<div class="bucket-item"><input type="checkbox"><span>🏠 Cook dinner together and mess up the kitchen laughing</span></div>
-<div class="bucket-item"><input type="checkbox"><span>💃 Dance in the rain like in movies, no music needed</span></div>
-<div class="bucket-item"><input type="checkbox"><span>📸 Take 1000 more photos together — cuter than these</span></div>
-<div class="bucket-item"><input type="checkbox"><span>💍 Celebrate your birthdays together till 80 — all Oct 15ths with you</span></div>
-<div class="bucket-item"><input type="checkbox"><span>👶 Grow old together — tell our kids how we started</span></div>
+<div class="bucket-item"><input type="checkbox"><span>🎂 Celebrate Oct 15th 2026 together - 4 days to go!</span></div>
+<div class="bucket-item"><input type="checkbox"><span>🎵 Dance to Ordinary together in our living room</span></div>
+<div class="bucket-item"><input type="checkbox"><span>✈️ Travel together, just us two</span></div>
+<div class="bucket-item"><input type="checkbox"><span>📸 Take 1000 more photos - cuter than these</span></div>
+<div class="bucket-item"><input type="checkbox"><span>💍 Celebrate every Oct 15th together till 80</span></div>
 </div>
 
-<h2>💖 60 Reasons Why I Love You — Nicole</h2>
-<p class="sub">I could write 6000 but let's start with these 60</p>
+<h2>💖 50 Reasons Why I Love You</h2>
 <div class="reasons" id="reasons"></div>
-
-<h2>🎵 A Song For You — Our Song</h2>
-<div class="card" style="text-align:center">
-<p style="font-family:Great Vibes;font-size:32px;color:var(--p)">You are my favorite song</p>
-<p>Every love song reminds me of you. Play your favorite song while scrolling this website — imagine I'm singing it to you.</p>
-<p style="margin-top:15px">🎶 <i>"You are my sunshine, my only sunshine..."</i> 🎶</p>
-<p style="font-size:12px;opacity:.5;margin-top:10px">Tip: Play music on your phone while reading this</p>
-</div>
-
 </div>
 
 <div class="final">
-<h2 style="color:white;margin:0">🎁 Your Birthday Surprise — 4 Days To Go!</h2>
-<p style="margin:15px 0 30px">Tap the gift box, my birthday queen — 15th Oct is almost here</p>
+<h2 style="color:white;margin:0">🎁 Your Birthday Surprise - 4 Days To Go!</h2>
+<p style="margin:15px 0 30px">Tap gift box, birthday queen - while Ordinary plays</p>
 <div class="gift" onclick="openGift()">🎁</div>
-<p id="giftMsg" style="display:none;margin-top:25px;font-size:21px;line-height:1.8;max-width:600px;margin-left:auto;margin-right:auto">
-Happy Birthday in advance to the most beautiful soul I know! 🎂💖<br><br>
-In 4 days, on 15th October, the world celebrates you. But I celebrate you every single day, every second.<br><br>
-Thank you for being born. Thank you for being you. Thank you for being mine.<br><br>
-May this new year bring you all the love you give to me, multiplied by a million. May all your dreams come true — I'll be here to make them happen.<br><br>
-I love you more than this long website, more than words, more than everything in this world.<br><br>
-<b>Forever yours,<br>Kelvin 💍<br>Your biggest fan</b><br><br>
-<span style="font-size:15px;opacity:.9;background:rgba(255,255,255,.15);padding:10px 20px;border-radius:50px">P.S. Your real gift is waiting on Oct 15th — be ready, queen 👑😉</span>
+<p id="giftMsg" style="display:none;margin-top:25px;font-size:21px;line-height:1.8;max-width:600px;margin:auto">
+Happy Birthday in advance, Nicole! 🎂💖<br><br>
+In 4 days, on 15th October, world celebrates you. But I celebrate you every day.<br><br>
+You make my ordinary life extraordinary - just like Alex Warren sings.<br><br>
+I love you more than this long website, more than words, more than everything.<br><br>
+<b>Forever yours, Kelvin 💍</b><br><br>
+<span style="font-size:14px;background:rgba(255,255,255,.15);padding:10px 20px;border-radius:50px">P.S. Real gift waiting Oct 15th 👑 Play Ordinary on repeat 😉</span>
 </p>
-<p style="margin-top:60px;opacity:.5;font-size:12px">Made with all my love, with your beautiful photos, for Nicole • 15 Oct 2026 • 4 days to go • Forever • Kelvin</p>
+<p style="margin-top:60px;opacity:.5;font-size:12px">Made with all my love, photos & our song for Nicole • 15 Oct 2026 • Forever • Kelvin</p>
 </div>
 
-<div id="m1" class="modal" onclick="closeM('m1')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m1')">×</span><h3>Birthday Love — 15th Oct 💌</h3><br>My love,<br><br>On this day, years ago, the world became brighter because you were born. I thank God every day for your life.<br><br>You are not getting older, you are getting more beautiful, wiser, more amazing. I am so proud of the woman you are becoming.<br><br>Happy birthday, my queen. Oct 15th is all about you. In 4 days, I'll make you feel like the queen you are.<br><br><b>Love, Kelvin</b></div></div>
-<div id="m2" class="modal" onclick="closeM('m2')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m2')">×</span><h3>Why You Are Special 🌙</h3><br>Nicole,<br><br>You mean peace. You mean home. When life is loud, you are my quiet.<br><br>You mean laughter that makes my stomach hurt, talks that make my heart full, and love that makes my future bright.<br><br>Look at your photos — you are beautiful outside, but your heart is even more beautiful inside.<br><br>You are my best friend, my girlfriend, my future, my everything.<br><br><b>Yours completely</b></div></div>
-<div id="m3" class="modal" onclick="closeM('m3')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m3')">×</span><h3>Our Memories 💖</h3><br>Remember our first call that lasted 3 hours? Remember when you laughed so hard you snorted? Remember when you fell asleep on video call and I just watched you sleep?<br><br>Every memory with you is my favorite. But I'm most excited for the memories we haven't made yet — birthdays, travels, our future house, our future kids calling you mama.<br><br>Look at us in these photos — we look good together because we ARE good together.<br><br>This is just the beginning, love.<br><br><b>Can't wait for more</b></div></div>
-<div id="m4" class="modal" onclick="closeM('m4')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m4')">×</span><h3>My Secret Wish 🔒</h3><br>My wish is simple...<br><br>I wish to celebrate every Oct 15th with you. This year, next year, when you're 30, 50, 80.<br><br>I wish to see you blow candles with our kids around us, still as beautiful as today in that pink dress.<br><br>My secret wish is you. Always you. Only you.<br><br><b>Will you let me make that wish come true?</b></div></div>
-<div id="m5" class="modal" onclick="closeM('m5')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m5')">×</span><h3>When I Miss You 😭</h3><br>When I miss you, I look at your photos — like these ones — and I smile like an idiot in public.<br><br>People think I'm crazy, but I don't care. Loving you makes me crazy in the best way.<br><br>You are always in my heart, my mind, my phone wallpaper, my prayers.<br><br><b>Missing you, loving you</b></div></div>
-<div id="m6" class="modal" onclick="closeM('m6')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m6')">×</span><h3>Future Us — 2030 🌹</h3><br>I see us — 2030, 15th Oct. You still in pink, me still obsessed with you. House, kids, birthdays, growing old.<br><br>You in white, me waiting at the altar, tears in my eyes because I can't believe you're mine.<br><br>Future us is beautiful because you are in it.<br><br><b>Future yours, Kelvin</b></div></div>
+<div id="m1" class="modal" onclick="closeM('m1')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m1')">×</span><h3>Birthday Love - Oct 15th 💌</h3><br>My love, on 15th Oct world became brighter because you were born. I thank God daily.<br><br><b>Love, Kelvin</b></div></div>
+<div id="m2" class="modal" onclick="closeM('m2')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m2')">×</span><h3>Why Special 🌙</h3><br>Nicole, you mean peace, home, laughter, future. You make ordinary extraordinary.<br><br><b>Yours</b></div></div>
+<div id="m3" class="modal" onclick="closeM('m3')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m3')">×</span><h3>Our Memories 💖</h3><br>Our calls, laughs, late nights - every memory favorite. More to come.<br><br><b>Kelvin</b></div></div>
+<div id="m4" class="modal" onclick="closeM('m4')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m4')">×</span><h3>Secret Wish 🔒</h3><br>Celebrate every Oct 15th with you at 30, 50, 80, dancing to Ordinary.<br><br><b>Will you?</b></div></div>
+<div id="m5" class="modal" onclick="closeM('m5')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m5')">×</span><h3>When I Miss You 😭</h3><br>I look at your photos, play Ordinary, smile like idiot in public.<br><br><b>Missing you</b></div></div>
+<div id="m6" class="modal" onclick="closeM('m6')"><div class="modal-content" onclick="event.stopPropagation()"><span class="close" onclick="closeM('m6')">×</span><h3>Future Us 🌹</h3><br>2030, Oct 15 - you in pink, me obsessed, Ordinary playing, kids around us.<br><br><b>Future yours</b></div></div>
 
 <script>
 function openM(id){document.getElementById(id).style.display='flex'}
 function closeM(id){document.getElementById(id).style.display='none'}
-function q(btn,correct){let p=btn.parentElement;if(correct){btn.classList.add('correct');p.querySelector('.ans').style.display='block';confetti(40)}else{btn.classList.add('wrong')}}
+function q(btn,c){let p=btn.parentElement;if(c){btn.classList.add('correct');p.querySelector('.ans').style.display='block';confetti(40)}else{btn.classList.add('wrong')}}
 function openGift(){document.getElementById('giftMsg').style.display='block';confetti(150);document.querySelector('.gift').textContent='💖';document.querySelector('.gift').style.background='white'}
-function confetti(n=40){for(let i=0;i<n;i++){let el=document.createElement('div');el.className='float';el.innerHTML=['💖','🎂','✨','💍','🌹','👑'][Math.floor(Math.random()*6)];el.style.left=Math.random()*100+'vw';el.style.fontSize=(18+Math.random()*24)+'px';el.style.animationDuration=(2+Math.random()*3)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),5000)}}
-function tick(){let diff=new Date("2026-10-15T00:00:00")-new Date();if(diff<=0){document.getElementById('d').textContent="00";document.getElementById('h').textContent="00";document.getElementById('m').textContent="00";document.getElementById('s').textContent="00";return}let d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);document.getElementById('d').textContent=String(d).padStart(2,'0');document.getElementById('h').textContent=String(h).padStart(2,'0');document.getElementById('m').textContent=String(m).padStart(2,'0');document.getElementById('s').textContent=String(s).padStart(2,'0')}
+function confetti(n){for(let i=0;i<n;i++){let el=document.createElement('div');el.className='float';el.innerHTML=['💖','🎂','✨','💍','🌹'][Math.floor(Math.random()*5)];el.style.left=Math.random()*100+'vw';el.style.fontSize=(18+Math.random()*20)+'px';el.style.animationDuration=(2+Math.random()*3)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),5000)}}
+function tick(){let diff=new Date("2026-10-15T00:00:00")-new Date();let d=document.getElementById('d'),h=document.getElementById('h'),m=document.getElementById('m'),s=document.getElementById('s');if(diff<=0){d.textContent="00";h.textContent="00";m.textContent="00";s.textContent="00";return}let dd=Math.floor(diff/86400000),hh=Math.floor(diff%86400000/3600000),mm=Math.floor(diff%3600000/60000),ss=Math.floor(diff%60000/1000);d.textContent=String(dd).padStart(2,'0');h.textContent=String(hh).padStart(2,'0');m.textContent=String(mm).padStart(2,'0');s.textContent=String(ss).padStart(2,'0')}
 setInterval(tick,1000);tick();
-function fillMeter(){let fill=document.getElementById('meter');let text=document.getElementById('meterText');fill.style.width='100%';text.textContent='100% — Actually 1000%! My love is infinite ♾️💖';confetti(60)}
-const reasonsList=["Your smile lights up my whole day","Your laugh is my favorite sound in the world","Your kindness to everyone you meet","How you care for me even when I'm difficult","Your beautiful eyes I get lost in","Your strength that inspires me","Your honesty even when it's hard","You believe in me when I don't believe in myself","You make me a better man","Your hugs feel like home — my home","Your voice calms my storms","Your jokes even your bad ones are cute","You remember small things I forget","You forgive me when I mess up","You support my dreams like they are yours","Your heart is the purest I've known","You are my peace in this loud world","You are my greatest adventure","Your hand fits perfectly in mine","Your morning face is the cutest","Your sleepy voice at night","How you say my name — my favorite sound","You make birthdays magical — especially Oct 15th","You are my forever person","How you look in that pink dress","You make 4 days feel like 4 years waiting","My favorite notification is from you","You are my greatest gift from God","I love you more today than yesterday","You are my always and forever","Your braids, your style, your everything","You make me want to be a better man for you","You are my home, not just a person","You are my everything and more","Your loyalty is rare","You are real in a fake world","You are mine and I am yours","My greatest blessing is you","You are my favorite hello and hardest goodbye","You are my queen 👑","You are my future wife in my prayers","My Oct 15th queen forever","You are rare — one in a billion","You are the reason I smile at my phone","You make my heart beat faster","You are my dream come true","You are my today and all my tomorrows","And 100 more reasons I can't write — infinite ♾️"];
+const reasonsList=["Your smile","Your laugh","Your kindness","Your eyes","Your heart","Your strength","You believe in me","Your hugs feel like home","Your voice calms me","Your support","You make me better","Your loyalty","You remember small things","You forgive me","You are my peace","You are my adventure","Your hand fits mine","Your morning face","How you say my name","You make birthdays magical - Oct 15th","You are my forever","You make ordinary extraordinary (like the song)","My favorite notification is you","You are my greatest gift","I love you more daily","You are my always","Your sleepy voice","Your honesty","Your dreams","Your courage","Your style","Your loyalty is rare","You are real","You are mine","My greatest blessing","You are my queen 👑","You are my future wife","My Oct 15th queen forever","You are rare","You make me smile at my phone","You are my dream come true","You are my today and all tomorrows","You make 4 days feel like forever waiting","And 100 more reasons - infinite ♾️"];
 let rHTML="";reasonsList.forEach((t,i)=>{rHTML+=`<div class='reason'><b>${i+1}.</b> ${t} 💖</div>`});document.getElementById('reasons').innerHTML=rHTML;
-setInterval(()=>{let e=document.createElement('div');e.className='float';e.innerHTML='💖';e.style.left=Math.random()*100+'vw';e.style.animationDuration='4s';e.style.fontSize='18px';document.body.appendChild(e);setTimeout(()=>e.remove(),6000)},700);
-</script>
-</body>
-</html>
+setInterval(()=>{let e=document.createElement('div');e.className='float';e.innerHTML='💖';e.style.left=Math.random()*100+'vw';e.style.anima
